@@ -370,12 +370,26 @@
             音楽を楽しむだけでなく、資産価値としても注目の中古ヤマハピアノ。
             詳しい情報をご希望の方はお問い合わせください。
           </p>
+           <!-- 2つのボタンを囲むコンテナ（PCでは横並び、スマホでは縦並びになるように設定） -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button class="btn btn-hero">お問い合わせ</button>
-            <button class="btn btn-outline-yellow btn-hero" style="padding: 1.5rem 2rem;">ショールームを予約</button>
+
+            <!-- 1. 既存のボタンを<a>タグで囲み、リンクを設定 -->
+            <a href="https://www.toriimusic.co.jp/piano/" target="_blank" rel="noopener noreferrer">
+              <button class="btn btn-hero">
+                中古ピアノを見る 
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </a>
+
+            <!-- 2. 新しいセールボタンを<a>タグと<button>で作成 -->
+            <a href="https://kens-pro.github.io/6mpianoLP/" target="_blank" rel="noopener noreferrer">
+              <button class="btn btn-hero">
+                6月21日・22日アーリーサマーセール
+              </button>
+            </a>
+
           </div>
-        </div>
-      </section>
+          </section>
 
       <!-- フッター -->
       <footer class="w-full py-8 bg-gray-900" style="color: #9ca3af;">
