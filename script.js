@@ -15,20 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { year: 2024, price: 1210000 },
     ];
 
-    // 中古ピアノ価格データ
-    const usedYu11Data = [
-        { year: 2018, price: 350000 },
-        { year: 2020, price: 380000 },
-        { year: 2022, price: 420000 },
-        { year: 2024, price: 480000 },
-    ];
+   // 中古ピアノ価格データ（新しいモデルに更新）
+const usedU1Data = [
+  { year: 2022, price: 319000 },
+  { year: 2025, price: 374000 },
+];
 
-    const usedYus1Data = [
-        { year: 2018, price: 450000 },
-        { year: 2020, price: 490000 },
-        { year: 2022, price: 550000 },
-        { year: 2024, price: 620000 },
-    ];
+const usedUx3Data = [
+  { year: 2022, price: 495000 },
+  { year: 2025, price: 550000 },
+];
+
 
     // Chart.jsのチャートインスタンスを格納するオブジェクト
     const chartInstances = {};
@@ -122,12 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "YUS1（新品）"
     );
 
-    // 中古ピアノ価格チャートの描画
-    createLineChart(
-        "usedPriceChart",
-        usedYu11Data,
-        usedYus1Data,
-        "YU11（中古）",
-        "YUS1（中古）"
-    );
+    // 中古ピアノ価格チャートの描画（新しいデータとラベルに更新）
+createLineChart(
+  "usedPriceChart",
+  usedU1Data,       // データを新しいものに変更
+  usedUx3Data,      // データを新しいものに変更
+  "ヤマハ U1モデル（中古）", // ラベルを新しいものに変更
+  "ヤマハ UX3（中古）"      // ラベルを新しいものに変更
+);
+
+// ▲▲▲ ここまでが変更箇所です ▲▲▲
 });
