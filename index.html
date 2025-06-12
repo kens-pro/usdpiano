@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中古ヤマハピアノは今が買い時</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- グラフ描画ライブラリ(Chart.js)を読み込みます -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main class="flex min-h-screen flex-col items-center">
+      <!-- ヒーローセクション -->
+      <section class="w-full bg-black text-white hero-section">
+        <div class="container mx-auto px-4 py-20 md:py-32 flex flex-col items-center text-center">
+          <h1 class="text-3xl md:text-5xl font-bold mb-6">
+            中古ヤマハピアノは<span class="text-yellow-400">今が買い時</span>
+          </h1>
+          <p class="text-lg md:text-xl mb-8 max-w-2xl">
+            新品ピアノの価格高騰に伴い、中古ピアノの価値も年々上昇中。
+            品質の高いヤマハ中古ピアノは、音楽を楽しむだけでなく、資産価値としても注目されています。
+          </p>
+          <button class="btn btn-hero">
+            中古ピアノを見る 
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          <div class="mt-12 animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon chevron-down-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- 新品価格上昇の影響 -->
+      <section class="w-full py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl md:text-4xl font-bold text-center mb-6">新品ピアノ価格の高騰</h2>
+          <p class="text-center text-lg mb-12 max-w-3xl mx-auto">
+            ヤマハの新品アップライトピアノは年々値上がりを続けています。
+            この価格上昇は中古市場にも波及し、品質の高い中古ピアノの価値を押し上げています。
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-12">
+            <h3 class="text-xl font-bold mb-4">新品ピアノ価格推移（2006年〜2024年）</h3>
+            <div class="h-400 line-chart-container">
+              <canvas id="newPriceChart"></canvas>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-center gap-8 mb-8">
+            <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200 max-w-md w-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="icon text-yellow-600 mb-4"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              <h3 class="text-xl font-bold mb-2">新品ピアノ価格の上昇</h3>
+              <p>
+                YU11モデルは2006年から2024年までに<span class="font-bold text-yellow-600">約54%上昇</span>、
+                YUS1モデルは<span class="font-bold text-yellow-600">約66%上昇</span>しています。
+                この傾向は今後も続くと予想されます。
+              </p>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 max-w-md w-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="icon text-blue-600 mb-4"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <h3 class="text-xl font-bold mb-2">中古ピアノへの影響</h3>
+              <p>
+                新品価格の上昇に伴い、品質の高い中古ピアノの価値も上昇しています。
+                今購入すれば、将来的な価値上昇が期待できる<span class="font-bold text-blue-600">賢い投資</span>
+                になります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 中古ピアノの価値上昇 -->
+      <section class="w-full py-16 md:py-24">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl md:text-4xl font-bold text-center mb-6">中古ヤマハピアノの価値上昇</h2>
+          <p class="text-center text-lg mb-12 max-w-3xl mx-auto">
+            新品価格の高騰を受け、品質の高い中古ヤマハピアノの価格も着実に上昇しています。
+            今が購入の最適なタイミングです。
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- PriceCard YU11 (中古) -->
+            <div class="card overflow-hidden">
+              <div class="card-header bg-gray-800 text-white flex items-center justify-between">
+                <span class="text-xl font-bold">ヤマハ YU11（中古）</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="icon text-yellow-400"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              </div>
+              <div class="card-content p-6">
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <p class="text-sm text-gray-500">2018年頃</p>
+                    <p class="text-xl font-bold">350,000円</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-500">2024年現在</p>
+                    <p class="text-xl font-bold">480,000円</p>
+                  </div>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg">
+                  <p class="text-center">
+                    <span class="text-2xl font-bold text-yellow-600">37.1%</span>
+                    <span class="text-gray-700 ml-2">上昇</span>
+                  </p>
+                  <p class="text-center text-sm text-gray-600 mt-1">6年間で価格上昇</p>
+                </div>
+                <p class="text-xs text-gray-500 mt-2 text-center">※価格は平均的な相場です</p>
+              </div>
+            </div>
+            <!-- PriceCard YUS1 (中古) -->
+            <div class="card overflow-hidden">
+              <div class="card-header bg-gray-800 text-white flex items-center justify-between">
+                <span class="text-xl font-bold">ヤマハ YUS1（中古）</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="icon text-yellow-400"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              </div>
+              <div class="card-content p-6">
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <p class="text-sm text-gray-500">2018年頃</p>
+                    <p class="text-xl font-bold">450,000円</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-500">2024年現在</p>
+                    <p class="text-xl font-bold">620,000円</p>
+                  </div>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg">
+                  <p class="text-center">
+                    <span class="text-2xl font-bold text-yellow-600">37.8%</span>
+                    <span class="text-gray-700 ml-2">上昇</span>
+                  </p>
+                  <p class="text-center text-sm text-gray-600 mt-1">6年間で価格上昇</p>
+                </div>
+                <p class="text-xs text-gray-500 mt-2 text-center">※価格は平均的な相場です</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-12">
+            <h3 class="text-xl font-bold mb-4">中古ピアノ価格推移（2018年〜2024年）</h3>
+            <div class="h-400 line-chart-container">
+              <canvas id="usedPriceChart"></canvas>
+            </div>
+            <p class="text-sm text-gray-500 mt-2 text-center">※実際の価格は状態や年式により異なります</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 中古ピアノのメリット -->
+      <section class="w-full py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl md:text-4xl font-bold text-center mb-6">中古ヤマハピアノを選ぶメリット</h2>
+          <p class="text-center text-lg mb-12 max-w-3xl mx-auto">
+            ヤマハの中古ピアノは、コストパフォーマンスに優れているだけでなく、
+            適切なメンテナンスが施されていれば新品と遜色ない音色と演奏性を持っています。
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 advantages-card">
+            <div class="card">
+              <div class="card-content pt-6">
+                <div class="flex flex-col items-center text-center">
+                  <div class="icon-wrapper bg-blue-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon text-blue-600"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                  </div>
+                  <h3 class="font-bold text-lg mb-2">コストパフォーマンス</h3>
+                  <p class="text-gray-600">
+                    新品と比較して大幅に抑えた価格で、高品質なヤマハピアノを手に入れることができます。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content pt-6">
+                <div class="flex flex-col items-center text-center">
+                  <div class="icon-wrapper bg-green-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon text-green-600"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                  </div>
+                  <h3 class="font-bold text-lg mb-2">成熟した音色</h3>
+                  <p class="text-gray-600">
+                    適切に使用されたピアノは、時間の経過とともに音色が成熟し、豊かな響きを持つようになります。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content pt-6">
+                <div class="flex flex-col items-center text-center">
+                  <div class="icon-wrapper bg-yellow-100">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon text-yellow-600"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  </div>
+                  <h3 class="font-bold text-lg mb-2">資産価値の上昇</h3>
+                  <p class="text-gray-600">
+                    新品価格の高騰に伴い、品質の高い中古ピアノの価値も上昇。将来的な資産価値も期待できます。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content pt-6">
+                <div class="flex flex-col items-center text-center">
+                  <div class="icon-wrapper bg-red-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon text-red-600"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  </div>
+                  <h3 class="font-bold text-lg mb-2">安心の品質</h3>
+                  <p class="text-gray-600">
+                    当店の中古ピアノは熟練技術者による整備済み。5年間の保証付きで安心してお使いいただけます。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative h-300 md-h-400">
+              <img
+                src="https://via.placeholder.com/600x400.png?text=Serviced+Used+Yamaha+Piano" 
+                alt="整備された中古ヤマハピアノ"
+                style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius: 0.5rem;"
+              />
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-4">プロによる整備済み中古ピアノ</h3>
+              <p class="mb-4">
+                当店の中古ピアノは、熟練の技術者によって丁寧に整備されています。
+                内部機構の調整、弦の張り具合、ハンマーの状態など、細部にわたって点検・調整を行い、
+                最良のコンディションでお届けします。
+              </p>
+              <p class="mb-4">
+                新品と比較して大幅にお求めやすい価格でありながら、音色や演奏性は新品に匹敵する品質を実現。
+                さらに、適切なメンテナンスを続ければ、長期間にわたって資産価値を維持できます。
+              </p>
+              <div class="flex items-center gap-2 text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <p class="font-bold">5年間の保証付き</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 今が買い時の理由 -->
+      <section class="w-full py-16 md:py-24 bg-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-2xl md:text-4xl font-bold mb-8">今、中古ピアノを購入すべき3つの理由</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 reason-card">
+            <div class="bg-blue-800 p-6 rounded-lg">
+              <div class="number-circle bg-yellow-400 text-blue-900">1</div>
+              <h3 class="text-xl font-bold mb-2">価格上昇前のチャンス</h3>
+              <p>
+                新品ピアノの価格高騰に伴い、中古ピアノの価格も今後さらに上昇すると予想されます。今が購入の最適なタイミングです。
+              </p>
+            </div>
+            <div class="bg-blue-800 p-6 rounded-lg">
+              <div class="number-circle bg-yellow-400 text-blue-900">2</div>
+              <h3 class="text-xl font-bold mb-2">資産価値の維持・向上</h3>
+              <p>
+                品質の高いヤマハピアノは適切なメンテナンスを行うことで、長期間にわたって資産価値を維持・向上させることができます。
+              </p>
+            </div>
+            <div class="bg-blue-800 p-6 rounded-lg">
+              <div class="number-circle bg-yellow-400 text-blue-900">3</div>
+              <h3 class="text-xl font-bold mb-2">コストパフォーマンス</h3>
+              <p>新品と比較して大幅に抑えた価格で、同等の音色と演奏性を持つピアノを手に入れることができます。</p>
+            </div>
+          </div>
+          <button class="btn btn-hero">
+            中古ピアノを見る 
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="icon ml-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- 在庫紹介セクション -->
+      <section class="w-full py-16 md:py-24">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl md:text-4xl font-bold text-center mb-6">おすすめ中古ピアノ</h2>
+          <p class="text-center text-lg mb-12 max-w-3xl mx-auto">
+            当店が自信を持っておすすめする、状態の良い中古ヤマハピアノをご紹介します。
+            すべて専門技術者による整備済みで、安心の保証付きです。
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="border rounded-lg overflow-hidden shadow-lg">
+              <div class="relative h-200">
+                <img src="https://via.placeholder.com/400x200.png?text=Yamaha+YU11" alt="中古ヤマハピアノ YU11" style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold text-lg">ヤマハ YU11（中古）</h3>
+                <p class="text-gray-600 mb-2">製造年：2015年</p>
+                <p class="mb-2">状態：良好 / 整備済み</p>
+                <p class="text-xl font-bold text-blue-600 mb-4">¥450,000（税込）</p>
+                <button class="btn btn-primary w-full">詳細を見る</button>
+              </div>
+            </div>
+            <div class="border rounded-lg overflow-hidden shadow-lg">
+              <div class="relative h-200">
+                <img src="https://via.placeholder.com/400x200.png?text=Yamaha+YUS1" alt="中古ヤマハピアノ YUS1" style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold text-lg">ヤマハ YUS1（中古）</h3>
+                <p class="text-gray-600 mb-2">製造年：2016年</p>
+                <p class="mb-2">状態：非常に良好 / 整備済み</p>
+                <p class="text-xl font-bold text-blue-600 mb-4">¥580,000（税込）</p>
+                <button class="btn btn-primary w-full">詳細を見る</button>
+              </div>
+            </div>
+            <div class="border rounded-lg overflow-hidden shadow-lg">
+              <div class="relative h-200">
+                <img src="https://via.placeholder.com/400x200.png?text=Yamaha+U3" alt="中古ヤマハピアノ U3" style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+              </div>
+              <div class="p-4">
+                <h3 class="font-bold text-lg">ヤマハ U3（中古）</h3>
+                <p class="text-gray-600 mb-2">製造年：2014年</p>
+                <p class="mb-2">状態：良好 / 整備済み</p>
+                <p class="text-xl font-bold text-blue-600 mb-4">¥620,000（税込）</p>
+                <button class="btn btn-primary w-full">詳細を見る</button>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-8">
+            <button class="btn btn-outline font-bold">
+              すべての在庫を見る 
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="icon ml-2 h-5 w-5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA セクション -->
+      <section class="w-full py-16 md:py-24 bg-black text-white">
+        <div class="container mx-auto px-4 text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" class="icon mx-auto mb-6 text-yellow-400"><path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Z"/><path d="M6 6v12"/><path d="M9 6v12"/><path d="M12 6v12"/><path d="M15 6v12"/><path d="M18 6v12"/><path d="M4 10h16"/></svg>
+          <h2 class="text-2xl md:text-4xl font-bold mb-6">今がチャンス！中古ピアノの価値は上昇中</h2>
+          <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            新品ピアノの価格高騰に伴い、中古ピアノの価値も年々上昇しています。
+            音楽を楽しむだけでなく、資産価値としても注目の中古ヤマハピアノ。
+            詳しい情報をご希望の方はお問い合わせください。
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button class="btn btn-hero">お問い合わせ</button>
+            <button class="btn btn-outline-yellow btn-hero" style="padding: 1.5rem 2rem;">ショールームを予約</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- フッター -->
+      <footer class="w-full py-8 bg-gray-900" style="color: #9ca3af;">
+        <div class="container mx-auto px-4 text-center">
+          <p>© 2025 中古ヤマハピアノ専門店. All rights reserved.</p>
+          <p class="mt-2 text-sm">
+            ※掲載している価格情報は参考価格です。実際の価格は個体の状態や年式により異なります。詳しくはお問い合わせください。
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- 最後に自分のJavaScriptファイルを読み込みます -->
+    <script src="./script.js"></script>
+ 
+</body>
+</html>
