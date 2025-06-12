@@ -11,20 +11,38 @@
 </head>
 <body>
     <main class="flex min-h-screen flex-col items-center">
-      <!-- ヒーローセクション -->
+<!-- ヒーローセクション -->
       <section class="w-full bg-black text-white hero-section">
         <div class="container mx-auto px-4 py-20 md:py-32 flex flex-col items-center text-center">
           <h1 class="text-3xl md:text-5xl font-bold mb-6">
             中古ヤマハピアノは<span class="text-yellow-400">今が買い時</span>
           </h1>
           <p class="text-lg md:text-xl mb-8 max-w-2xl">
-            新品ピアノの価格高騰に伴い、中古ピアノの価値も年々上昇中。
-            品質の高いヤマハ中古ピアノは、音楽を楽しむだけでなく、資産価値としても注目されています。
+            新品ピアノの価格高騰に伴い、中古ピアノの価値も年々上昇中。品質の高いヤマハ
+            中古ピアノは、音楽を楽しむだけでなく、資産価値としても注目されています。
           </p>
-          <button class="btn btn-hero">
-            中古ピアノを見る 
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </button>
+
+          <!-- ▼▼▼ ここからが修正箇所です ▼▼▼ -->
+          <!-- 2つのボタンを囲むコンテナ（PCでは横並び、スマホでは縦並びになるように設定） -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <!-- 1. 既存のボタンを<a>タグで囲み、リンクを設定 -->
+            <a href="https://www.toriimusic.co.jp/piano/" target="_blank" rel="noopener noreferrer">
+              <button class="btn btn-hero">
+                中古ピアノを見る 
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </a>
+
+            <!-- 2. 新しいセールボタンを<a>タグと<button>で作成 -->
+            <a href="https://kens-pro.github.io/6mpianoLP/" target="_blank" rel="noopener noreferrer">
+              <button class="btn btn-hero">
+                6月21日・22日アーリーサマーセール
+              </button>
+            </a>
+
+          </div>
+          <!-- ▲▲▲ ここまでが修正箇所です ▲▲▲ -->
           <div class="mt-12 animate-bounce">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon chevron-down-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </div>
